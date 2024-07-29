@@ -1,0 +1,63 @@
+# Miscellaneous
+*.class
+*.lock
+*.log
+*.pyc
+*.swp
+*.tmp
+*.DS_Store
+*.suo
+*.sln
+*.dll
+*.exe
+*.pdb
+*.idb
+*.cab
+*.rar
+*.zip
+*.tar.gz
+*.tar
+*.jar
+*.war
+*.ear
+*.so
+*.dylib
+*.lib
+*.a
+*.la
+*.lo
+*.class
+
+# Flutter specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+!android/gradle/wrapper/gradle-wrapper.jar
+# Exclude generated files and folders:
+**/build/
+**/.dart_tool/
+**/!.plugin_deps
+**/!.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.metadata
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Podfile.lock
+**/ios/Pods/
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# IntelliJ related files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code related files
+.vscode/
