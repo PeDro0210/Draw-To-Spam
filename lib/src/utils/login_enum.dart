@@ -1,6 +1,0 @@
-
-
-enum loginEnum {
-  APPLE,
-  GOOGLE
-}

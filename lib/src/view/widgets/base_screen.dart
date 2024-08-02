@@ -4,19 +4,20 @@ import 'package:flutter/material.dart';
 //point of the activity, but still can have a lot of things place in the pure
 //class
 class BaseScreen extends StatelessWidget {
-  final Widget screen;
+  final List<Widget> childrenWidget;
   final List<Color> colors;
 
   // Constructor
   const BaseScreen({
   super.key, 
-  required this.screen, 
+  required this.childrenWidget, 
   required this.colors
   });
 
   // Encapsulation, fuck that shit
   @override
   Widget build(BuildContext context) {
+
     return Container(
         // ** Background
         decoration: BoxDecoration(
@@ -26,6 +27,15 @@ class BaseScreen extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-        child: screen);
+        child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Center(
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:childrenWidget 
+        ),
+      ),
+    ));
   }
 }
+
