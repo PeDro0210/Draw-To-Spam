@@ -40,8 +40,9 @@ class _RoomsState extends State<Rooms> {
           onPushFunction: reRoutDrawSpace,
           buttonTitle: 'button ${i.toString()}',
           buttonType: buttonEnum.Room,
-          roomPhotoPath: 'assets/images/google_logo.png',
-          groupName: 'The Sex Cat Grkasfjsalkjfoup',
+          roomPhotoPath: 'https://pbs.twimg.com/media/GSfgKVFXIAA-5eG?format=jpg&name=medium',
+          groupName: 'The Sex Cat Group',
+          peopleCounter: 0,
         ),
       );
     }

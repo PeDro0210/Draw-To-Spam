@@ -1,9 +1,11 @@
+import 'package:draw_to_spam/src/view/widgets/people_counter.dart';
 import 'package:flutter/material.dart';
 import 'package:draw_to_spam/src/view/widgets/draw_button.dart';
 
 class RoomButton extends DrawButton {
   final String roomPhotoPath;
   final String groupName;
+  final int peopleCounter;
 
   const RoomButton({
     super.key,
@@ -12,32 +14,33 @@ class RoomButton extends DrawButton {
     required super.buttonType,
     required this.roomPhotoPath,
     required this.groupName,
+    required this.peopleCounter
   });
 
   @override
-  Widget build(BuildContext context) { //TODO: Change padding and margins
+  Widget build(BuildContext context) {
+    //TODO: Change padding and margins
     return DrawButton(
       onPushFunction: onPushFunction,
       buttonTitle: buttonTitle,
       buttonType: buttonType,
       background: Colors.black,
       opacity: 0.2,
-      verticalPadding: 25,
+      verticalPadding: 15,
       verticalMargin: 15,
-      horizontalPadding: 25,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       childrenWidget: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: 40,
-              height: 40,
+              height: 100,
+              width: 100,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15.0),
-                child: Image.asset(
+                child: Image.network(
                   roomPhotoPath,
-                  fit: BoxFit.cover, // Ensures the image fits well
+                  fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       color: Colors.grey, // Placeholder for missing image
@@ -46,20 +49,22 @@ class RoomButton extends DrawButton {
                 ),
               ),
             ),
-            // Text with constraints and overflow handling
+            const SizedBox(width: 10),
             Container(
               constraints: BoxConstraints(
-                maxWidth: MediaQuery.of(context).size.width * 0.6, // Adjust width as needed
+                maxWidth: MediaQuery.of(context).size.width *
+                    0.6, // Adjust width as needed
               ),
               child: Text(
                 groupName,
-                style: TextStyle(
-                 //TODO: Add the style for the text 
-                ),
+                style: const TextStyle(fontFamily: 'Inter', fontSize: 25),
                 maxLines: 1, // Limit to one line
                 overflow: TextOverflow.ellipsis, // Handle overflow
               ),
             ),
+            const SizedBox(width: 10),
+            // TODO: add the people counter
+            PeopleCounter(peopleCounter: peopleCounter)
           ],
         ),
       ],
