@@ -4,6 +4,8 @@ import 'package:draw_to_spam/src/view/widgets/base_screen.dart';
 import 'package:draw_to_spam/src/view/widgets/buttons/room_button.dart';
 import 'package:flutter/material.dart';
 
+//TODO: When ever the app closes, let the API be called again
+
 class Rooms extends StatefulWidget {
   const Rooms({super.key});
 
@@ -14,6 +16,7 @@ class Rooms extends StatefulWidget {
 
 class _RoomsState extends State<Rooms> {
   late List<RoomButton> groups;
+
   @override
   void initState() {
     super.initState();
@@ -34,13 +37,14 @@ class _RoomsState extends State<Rooms> {
 
   void createButtons() {
     //TODO: Implement the FetchDataGroupMetaData with the buttons constructors
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 300; i++) {
       groups.add(
         RoomButton(
           onPushFunction: reRoutDrawSpace,
           buttonTitle: 'button ${i.toString()}',
           buttonType: buttonEnum.Room,
-          roomPhotoPath: 'https://pbs.twimg.com/media/GSfgKVFXIAA-5eG?format=jpg&name=medium',
+          roomPhotoPath:
+              'https://pbs.twimg.com/media/GSfgKVFXIAA-5eG?format=jpg&name=medium',
           groupName: 'The Sex Cat Group',
           peopleCounter: 0,
         ),
@@ -50,6 +54,18 @@ class _RoomsState extends State<Rooms> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScreen(childrenWidget: groups, colors: roomsBackGroundColors);
+    return BaseScreen(
+      childrenWidget: [
+        Expanded(
+          child: ListView.builder(
+            itemCount: groups.length,
+            itemBuilder: (context, index) {
+              return groups[index];
+            },
+          ),
+        ),
+      ],
+      colors: roomsBackGroundColors,
+    );
   }
 }

@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:draw_to_spam/src/view/widgets/styled_text.dart';
+import 'package:draw_to_spam/src/view/widgets/text_field.dart';
 
 //must of the OOP principals apply in this part, the createState it's well the
 //point of the activity, but still can have a lot of things place in the pure

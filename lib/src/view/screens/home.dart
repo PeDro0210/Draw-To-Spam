@@ -15,11 +15,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseScreen(childrenWidget: [
       HomeButton(
-        onPushFunction: routingScreens,
-        buttonTitle: 'Rooms',
-        buttonType: buttonEnum.Rooms),
+          onPushFunction: routingScreens,
+          buttonTitle: 'Rooms',
+          buttonType: buttonEnum.Rooms),
       HomeButton(
-          onPushFunction: routingScreens, 
+          onPushFunction: routingScreens,
           buttonTitle: 'Join Rooms',
           buttonType: buttonEnum.JoinRooms),
       HomeButton(

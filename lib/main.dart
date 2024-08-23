@@ -1,3 +1,5 @@
+import 'package:draw_to_spam/src/view/screens/create_room.dart';
+import 'package:draw_to_spam/src/view/screens/login.dart';
 import 'package:draw_to_spam/src/view/screens/rooms.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +16,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
               seedColor: const Color.fromARGB(
-                  255, 23, 96, 26)
-              ), //this green color needs changes ngl
+                  255, 23, 96, 26)), //this green color needs changes ngl
           useMaterial3: true,
         ),
         // TODO:Implement the navigator
