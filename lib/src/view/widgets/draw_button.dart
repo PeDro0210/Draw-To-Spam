@@ -13,7 +13,7 @@ class DrawButton extends StatelessWidget {
   final double? horizontalPadding;
   final Color? background;
   final double? opacity;
-  final OutlinedBorder?  shape;
+  final OutlinedBorder? shape;
 
   const DrawButton(
       {super.key,
@@ -32,21 +32,24 @@ class DrawButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(//margins of all the container
+        margin: EdgeInsets.symmetric(
+            //margins of all the container
             vertical: verticalMargin ?? 0.0,
             horizontal: horizontalMargin ?? 0.0),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric( //you know what padding is
-                  vertical: verticalPadding ?? 0.0,
-                  horizontal: horizontalPadding ?? 0.0
-                ),
+                padding: EdgeInsets.symmetric(
+                    //you know what padding is
+                    vertical: verticalPadding ?? 0.0,
+                    horizontal: horizontalPadding ?? 0.0),
                 shape: shape,
                 backgroundColor: background?.withOpacity(opacity ?? 1.0)),
-            onPressed: () => onPushFunction(buttonType), //dude different things depending on the button
+            onPressed: () => onPushFunction(
+                buttonType), //dude different things depending on the button
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: childrenWidget ?? [], //alld the widgets that the button could have
+              children: childrenWidget ??
+                  [], //alld the widgets that the button could have
             )));
   }
 }

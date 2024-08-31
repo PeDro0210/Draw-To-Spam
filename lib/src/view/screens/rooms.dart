@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 //TODO: When ever the app closes, let the API be called again
 
 class Rooms extends StatefulWidget {
-  const Rooms({super.key});
+  final String uid;
+  const Rooms({super.key, required this.uid});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -37,7 +38,7 @@ class _RoomsState extends State<Rooms> {
 
   void createButtons() {
     //TODO: Implement the FetchDataGroupMetaData with the buttons constructors
-    for (int i = 0; i < 300; i++) {
+    for (int i = 0; i < 10; i++) {
       groups.add(
         RoomButton(
           onPushFunction: reRoutDrawSpace,

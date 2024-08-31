@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
       childrenWidget: [
         const LogoDisplay(),
         Container(
-          margin: const EdgeInsets.only(top: 150),
+          margin: const EdgeInsets.only(top: 128),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

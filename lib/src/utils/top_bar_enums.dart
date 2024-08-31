@@ -1,0 +1,1 @@
+enum TopBarEnums { initialScreen, normalScreen }

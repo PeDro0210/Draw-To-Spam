@@ -8,16 +8,12 @@ class BaseScreen extends StatelessWidget {
   final List<Color> colors;
 
   // Constructor
-  const BaseScreen({
-  super.key, 
-  required this.childrenWidget, 
-  required this.colors
-  });
+  const BaseScreen(
+      {super.key, required this.childrenWidget, required this.colors});
 
   // Encapsulation, fuck that shit
   @override
   Widget build(BuildContext context) {
-
     return Container(
         // ** Background
         decoration: BoxDecoration(
@@ -28,14 +24,14 @@ class BaseScreen extends StatelessWidget {
           ),
         ),
         child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Center(
-          child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:childrenWidget 
-        ),
-      ),
-    ));
+          resizeToAvoidBottomInset:
+              false, //for the keyboard issue with the resizing
+          backgroundColor: Colors.transparent,
+          body: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: childrenWidget),
+          ),
+        ));
   }
 }
-

@@ -1,4 +1,6 @@
 import 'package:draw_to_spam/src/view/screens/create_room.dart';
+import 'package:draw_to_spam/src/view/screens/home.dart';
+import 'package:draw_to_spam/src/view/screens/join_room.dart';
 import 'package:draw_to_spam/src/view/screens/login.dart';
 import 'package:draw_to_spam/src/view/screens/rooms.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // TODO:Implement the navigator
-        home: const Rooms() //this is for debugging purpose
+        home: JoinRoom() //this is for debugging purpose
         );
   }
 }
