@@ -1,1 +1,1 @@
-enum TopBarEnums { initialScreen, normalScreen }
+enum TopBarEnums { initialScreen, normalScreen, noAppBar }

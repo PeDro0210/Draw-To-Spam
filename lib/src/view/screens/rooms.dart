@@ -1,5 +1,6 @@
 import 'package:draw_to_spam/src/materials/screen_colors.dart';
 import 'package:draw_to_spam/src/utils/button_enum.dart';
+import 'package:draw_to_spam/src/utils/top_bar_enums.dart';
 import 'package:draw_to_spam/src/view/widgets/base_screen.dart';
 import 'package:draw_to_spam/src/view/widgets/buttons/room_button.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +8,7 @@ import 'package:flutter/material.dart';
 //TODO: When ever the app closes, let the API be called again
 
 class Rooms extends StatefulWidget {
-  final String uid;
-  const Rooms({super.key, required this.uid});
+  const Rooms({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -56,6 +56,7 @@ class _RoomsState extends State<Rooms> {
   @override
   Widget build(BuildContext context) {
     return BaseScreen(
+      screenType: TopBarEnums.normalScreen,
       childrenWidget: [
         Expanded(
           child: ListView.builder(

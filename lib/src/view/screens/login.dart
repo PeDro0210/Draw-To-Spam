@@ -1,5 +1,6 @@
 import 'package:draw_to_spam/src/materials/screen_colors.dart';
 import 'package:draw_to_spam/src/utils/button_enum.dart';
+import 'package:draw_to_spam/src/utils/top_bar_enums.dart';
 import 'package:draw_to_spam/src/view/widgets/base_screen.dart';
 import 'package:draw_to_spam/src/view/widgets/logo_display.dart';
 import 'package:draw_to_spam/src/view/widgets/styled_text.dart';
@@ -25,6 +26,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseScreen(
+      screenType: TopBarEnums.noAppBar,
       childrenWidget: [
         const LogoDisplay(),
         Container(

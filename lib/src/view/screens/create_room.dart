@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:draw_to_spam/src/materials/screen_colors.dart';
 import 'package:draw_to_spam/src/utils/button_enum.dart';
+import 'package:draw_to_spam/src/utils/top_bar_enums.dart';
 import 'package:draw_to_spam/src/view/widgets/base_screen.dart';
 import 'package:draw_to_spam/src/view/widgets/buttons/photo_button.dart';
 import 'package:draw_to_spam/src/view/widgets/text_field.dart';
@@ -12,9 +13,8 @@ import 'package:draw_to_spam/src/view/widgets/styled_text.dart';
 //point of the activity, but still can have a lot of things place in the pure
 //class
 class CreateRoom extends StatefulWidget {
-  final String uid;
   // Constructor
-  const CreateRoom({super.key, required this.uid});
+  const CreateRoom({super.key});
 
   @override
   State<CreateRoom> createState() => _CreateRoom();
@@ -52,20 +52,23 @@ class _CreateRoom extends State<CreateRoom> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScreen(childrenWidget: [
-      const StyledText(text: "Add Photo"),
-      const SizedBox(height: 16),
-      DrawTextField(
-        fieldTitle: "ROOM NAME",
-        onPressed: createRoom,
-      ),
-      const SizedBox(height: 64),
-      PhotoButton(
-        onPushFunction: pickImage,
-        buttonTitle: "Add Photo",
-        buttonType: buttonEnum.PhotoButton,
-        image: image,
-      ),
-    ], colors: createRoomsBackGroundColors);
+    return BaseScreen(
+        screenType: TopBarEnums.normalScreen,
+        childrenWidget: [
+          const StyledText(text: "Add Photo"),
+          const SizedBox(height: 16),
+          DrawTextField(
+            fieldTitle: "ROOM NAME",
+            onPressed: createRoom,
+          ),
+          const SizedBox(height: 64),
+          PhotoButton(
+            onPushFunction: pickImage,
+            buttonTitle: "Add Photo",
+            buttonType: buttonEnum.PhotoButton,
+            image: image,
+          ),
+        ],
+        colors: createRoomsBackGroundColors);
   }
 }

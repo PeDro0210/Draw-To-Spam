@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         // TODO:Implement the navigator
-        home: JoinRoom() //this is for debugging purpose
+        home: Login() //this is for debugging purpose
         );
   }
 }
