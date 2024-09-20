@@ -12,17 +12,34 @@ import '../widgets/buttons/login_button.dart';
 / point of the activity, but still can have a lot of things place in the pure
 / class
 */
-
 class Login extends StatelessWidget {
-  // Constructor
   const Login({super.key});
 
-  void manageAuth(buttonEnum buttonType) {
-    // TODO: implement login auth with firebase and google
-    throw UnimplementedError();
+  void manageAuth(BuildContext context, buttonEnum buttonPressed) {
+    // TODO: implement login auth with Firebase and Google
+
+    // For debugging, navigating to home screen
+
+    switch (buttonPressed) {
+      case buttonEnum.GOOGLE:
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/home',
+          (route) => false,
+        );
+        break;
+      case buttonEnum.APPLE:
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/home',
+          (route) => false,
+        );
+        break;
+      default:
+        break;
+    }
   }
 
-  // Encapsulation, fuck that shit
   @override
   Widget build(BuildContext context) {
     return BaseScreen(
@@ -34,24 +51,25 @@ class Login extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const StyledText(
-                text: "Join Using",
-              ),
+              const StyledText(text: "Join Using"),
               const Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 15)),
               LoginButton(
-                onPushFunction: manageAuth,
-                buttonTitle: 'oogle',
+                onPushFunction: (buttonEnum buttonType) =>
+                    manageAuth(context, buttonType),
+                buttonTitle: 'Google',
                 buttonType: buttonEnum.GOOGLE,
                 logoPath: 'assets/images/google_logo.png',
               ),
               LoginButton(
-                  onPushFunction: manageAuth,
-                  buttonTitle: 'Apple',
-                  buttonType: buttonEnum.APPLE,
-                  logoPath: 'assets/images/google_logo.png')
+                onPushFunction: (buttonEnum buttonType) =>
+                    manageAuth(context, buttonType),
+                buttonTitle: 'Apple',
+                buttonType: buttonEnum.APPLE,
+                logoPath: 'assets/images/apple_logo.png',
+              ),
             ],
           ),
-        )
+        ),
       ],
       colors: loginBackgroundColors,
     );

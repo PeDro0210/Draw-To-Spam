@@ -48,6 +48,7 @@ class _CreateRoom extends State<CreateRoom> {
   void createRoom(String roomName) {
     //take the photo from the class it self
     // TODO: Call the firebase services to create a room with photo and name
+    throw UnimplementedError();
   }
 
   @override

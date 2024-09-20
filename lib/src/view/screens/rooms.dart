@@ -31,7 +31,7 @@ class _RoomsState extends State<Rooms> {
     throw UnimplementedError();
   }
 
-  void reRoutDrawSpace(buttonEnum button) {
+  void reRouteDrawSpace(buttonEnum button) {
     //TODO: See how to implement the metadata in here
     throw UnimplementedError();
   }
@@ -41,7 +41,7 @@ class _RoomsState extends State<Rooms> {
     for (int i = 0; i < 10; i++) {
       groups.add(
         RoomButton(
-          onPushFunction: reRoutDrawSpace,
+          onPushFunction: reRouteDrawSpace,
           buttonTitle: 'button ${i.toString()}',
           buttonType: buttonEnum.Room,
           roomPhotoPath:

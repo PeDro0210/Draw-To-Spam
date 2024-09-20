@@ -8,28 +8,51 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
-  void routingScreens(buttonEnum buttonPressed) {
-    throw UnimplementedError();
+  //routing done IG
+  void routingScreens(BuildContext context, buttonEnum buttonPressed) {
+    switch (buttonPressed) {
+      case buttonEnum.Rooms:
+        Navigator.pushNamed(context, "/rooms");
+        break;
+      case buttonEnum.JoinRooms:
+        Navigator.pushNamed(context, "/join_rooms");
+        break;
+      case buttonEnum.CreateRooms:
+        Navigator.pushNamed(context, "/create_rooms");
+        break;
+      default:
+        break;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return BaseScreen(
-        screenType: TopBarEnums.initialScreen,
-        childrenWidget: [
-          HomeButton(
-              onPushFunction: routingScreens,
-              buttonTitle: 'Rooms',
-              buttonType: buttonEnum.Rooms),
-          HomeButton(
-              onPushFunction: routingScreens,
-              buttonTitle: 'Join Rooms',
-              buttonType: buttonEnum.JoinRooms),
-          HomeButton(
-              onPushFunction: routingScreens,
-              buttonTitle: 'Create Rooms',
-              buttonType: buttonEnum.CreateRooms),
-        ],
-        colors: homeBackgroundColors);
+      screenType: TopBarEnums.initialScreen,
+      childrenWidget: [
+        HomeButton(
+          onPushFunction: (buttonEnum buttonType) =>
+              routingScreens(context, buttonType),
+          buttonTitle: 'Rooms',
+          buttonType: buttonEnum.Rooms,
+        ),
+        HomeButton(
+          onPushFunction: (buttonEnum buttonType) =>
+              routingScreens(context, buttonType),
+          buttonTitle: 'Join Rooms',
+          buttonType: buttonEnum.JoinRooms,
+        ),
+        HomeButton(
+          onPushFunction: (buttonEnum buttonType) =>
+              routingScreens(context, buttonType),
+          buttonTitle: 'Create Rooms',
+          buttonType: buttonEnum.CreateRooms,
+        ),
+        const SizedBox(
+          height: 32,
+        )
+      ],
+      colors: homeBackgroundColors,
+    );
   }
 }
