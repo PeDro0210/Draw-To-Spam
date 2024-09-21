@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
+  //TODO: check for the id that will be save in a stateful class in the class User
+
   //routing done IG
   void routingScreens(BuildContext context, buttonEnum buttonPressed) {
     switch (buttonPressed) {

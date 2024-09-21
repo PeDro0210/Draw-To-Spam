@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pedro0210.drawtospam">
     <application
         android:label="draw_to_spam"
         android:name="${applicationName}"

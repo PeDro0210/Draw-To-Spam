@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81993349190",
+    "project_id": "draw-to-spam",
+    "storage_bucket": "draw-to-spam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81993349190:android:2e67708ff1b70c207bf247",
+        "android_client_info": {
+          "package_name": "com.pedro0210.drawtospam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHJ2XgJFezI_9boYBziX15dfr-8ebOPWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
