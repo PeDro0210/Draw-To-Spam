@@ -27,7 +27,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace = "com.pedro0210.drawtospam"
+    namespace = "com.pedro021.drawtospam"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -39,7 +39,7 @@ android {
    defaultConfig {
     minSdkVersion 23 // Update from 21 to 23
     targetSdkVersion flutter.targetSdkVersion
-    applicationId "com.pedro0210.drawtospam"
+    applicationId "com.pedro021.drawtospam"
     versionCode = flutterVersionCode.toInteger()
     versionName = flutterVersionName
     }

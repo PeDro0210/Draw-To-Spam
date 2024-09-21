@@ -61,3 +61,6 @@
 
 # VS Code related files
 .vscode/
+
+
+android/google-services.json

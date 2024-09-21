@@ -7,9 +7,28 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:81993349190:android:d6c7d089aa7ed7117bf247",
+        "android_client_info": {
+          "package_name": "com.pedro021.drawtospam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHJ2XgJFezI_9boYBziX15dfr-8ebOPWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:81993349190:android:2e67708ff1b70c207bf247",
         "android_client_info": {
-          "package_name": "com.pedro0210.drawtospam"
+          "package_name": "com.pedro021.drawtospam"
         }
       },
       "oauth_client": [],
